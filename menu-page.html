@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <!-- Change logo here -->
+        <img src="logo.png" alt="Web Logo" />
+        <span>Web Logo</span>
+      </div>
+      <!-- add HTML Links here Replace # -->
+      <nav class="main-nav">
+        <a href="#">Menu</a>
+        <a href="#">About us</a>
+        <a href="#">Contact us</a>
+      </nav>
+      <div class="cart">
+        <!-- Cart Header here ps. Add logo if you want -->
+        <a onclick="toggleCart()">My cart</a>
+        <div id="cart-dropdown" class="cart-dropdown"></div>
+      </div>
+    </header>
+    <main>
+      <button
+        class="landing-back-button"
+        onclick="window.location.href='landing-page.html'"
+      >
+        ← back
+      </button>
+      <h1>Menu</h1>
+      <!-- Does the Filtering for the Sections -->
+      <nav class="landing-menu-categories">
+        <button class="btn active" onclick="filterSelection('all')">
+          Show all
+        </button>
+        <button class="btn" onclick="filterSelection('pizza')">Pizza</button>
+        <button class="btn" onclick="filterSelection('drinks')">Drinks</button>
+        <button class="btn" onclick="filterSelection('snacks')">Snacks</button>
+        <button class="btn" onclick="filterSelection('bundles')">
+          Bundles
+        </button>
+      </nav>
+      <!-- Actual Menu/Food Sections -->
+      <section class="landing-menu-section container">
+        <div class="landing-menu-item filterDiv pizza">
+          <img src="img/Peperoni Pizza.jpeg" alt="The Pepperoni Supreme" />
+          <div class="details">
+            <h2>The Pepperoni Supreme</h2>
+            <!-- Name of Product -->
+            <p>
+              Packed with layers of savory pepperoni slices, The Pepperoni
+              Supreme features a rich tomato sauce and gooey mozzarella cheese.
+              Finished with a sprinkle of Parmesan and red pepper flakes, it’s a
+              perfect blend of bold flavors and spice.
+            </p>
+            <!-- Description of Product -->
+            <button
+              onclick="addToCart('The Pepperoni Supreme', 'img/Peperoni Pizza.jpeg', 15.99)"
+            >
+              Add to cart
+            </button>
+            <!-- Sending Infromation of Product to Shopping Cart Function -->
+            <span class="price">$15.99</span>
+            <!-- Price of Product -->
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv pizza">
+          <img src="img/PineapplePizza.webp" alt="Pineapple Pizza" />
+          <div class="details">
+            <h2>Tropical Pineapple Delight</h2>
+            <p>
+              This pizza features juicy pineapple chunks paired with savory ham,
+              all atop a rich tomato sauce and a layer of gooey mozzarella
+              cheese. Finished with a sprinkle of fresh basil, it offers a
+              perfect balance of sweet and savory flavors.
+            </p>
+            <button
+              onclick="addToCart('Tropical Pineapple Delight', 'img/PineapplePizza.webp', 10.39)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$10.39</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv pizza">
+          <img src="img/Cheese Pizza.jpg" alt="Pep roni" />
+          <div class="details">
+            <h2>Ultimate Cheese Lovers</h2>
+            <p>
+              For cheese enthusiasts, this pizza is a dream come true, featuring
+              a rich blend of mozzarella, cheddar, Parmesan, and provolone
+              cheeses. The creamy tomato sauce and perfectly baked crust make it
+              a simple yet irresistible classic.
+            </p>
+            <button
+              onclick="addToCart('Ultimate Cheese Lovers', 'img/Cheese Pizza.jpg', 16.59)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$16.59</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv pizza">
+          <img src="img/Veggie Pizza.jpeg" alt="Veggie Pizza" />
+          <div class="details">
+            <h2>Garden Fresh Veggie</h2>
+            <p>
+              A colorful medley of bell peppers, red onions, mushrooms, black
+              olives, and spinach is the star of this pizza. With a savory
+              tomato sauce and a blend of mozzarella and feta cheese, each bite
+              is a fresh and satisfying experience.
+            </p>
+            <button
+              onclick="addToCart('Garden Fresh Veggie', 'img/Veggie Pizza.jpeg', 12.69)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$12.69</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv drinks">
+          <img src="img/Italian Soda.jpg" alt="Italian Soda" />
+          <div class="details">
+            <h2>Classic Italian Soda</h2>
+            <p>
+              A refreshing and fizzy delight, our Classic Italian Soda is
+              available in a variety of flavors like raspberry, lemon, and
+              vanilla. It's made with carbonated water, flavored syrup, and a
+              splash of cream for a smooth and bubbly treat.
+            </p>
+            <button
+              onclick="addToCart('Classic Italian Soda', 'img/Italian Soda.jpg', 5.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$5.99</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv drinks">
+          <img src="img/Lemonade.webp" alt="Homemade Lemonade" />
+          <div class="details">
+            <h2>Homemade Lemonade</h2>
+            <p>
+              Perfectly balancing sweet and tart, our Homemade Lemonade is made
+              with freshly squeezed lemons, pure cane sugar, and a hint of mint.
+              Served over ice, it's a thirst-quenching favorite for any meal.
+            </p>
+            <button
+              onclick="addToCart('Homemade Lemonade', 'img/Lemonade.webp', 4.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$4.99</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv drinks">
+          <img src="img/Berry Punch.jpg" alt="Berry Punch" />
+          <div class="details">
+            <h2>Sparkling Berry Punch</h2>
+            <p>
+              This vibrant drink features a blend of sparkling water and a mix
+              of berry juices, including raspberry, blueberry, and strawberry.
+              Garnished with fresh berries and a sprig of mint, it's a fruity
+              and fizzy delight.
+            </p>
+            <button
+              onclick="addToCart('Sparkling Berry Punch', 'img/Berry Punch.jpg', 3.50)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$3.50</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv drinks">
+          <img src="img/Iced Tea.jpeg" alt="Classic Iced Tea" />
+          <div class="details">
+            <h2>Classic Iced Tea</h2>
+            <p>
+              Brewed to perfection and chilled for ultimate refreshment, our
+              Classic Iced Tea is a timeless favorite. Lightly sweetened and
+              served over ice, it's the perfect companion to any pizza, offering
+              a crisp and revitalizing taste.
+            </p>
+            <button
+              onclick="addToCart('Classic Iced Tea', 'img/Iced Tea.jpeg', 6.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$6.99</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv snacks">
+          <img src="img/garlicknots.jpg" alt="Garlic Knots" />
+          <div class="details">
+            <h2>Garlic Knots</h2>
+            <p>
+              Soft, doughy knots brushed with garlic butter and sprinkled with
+              Parmesan cheese. Served with a side of marinara sauce for dipping,
+              they make a perfect appetizer or snack.
+            </p>
+            <button
+              onclick="addToCart('Garlic Knots', 'img/garlicknots.jpg', 2.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$2.99</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv snacks">
+          <img src="img/Mozzerela Sticks.jpeg" alt="Mozzarella Sticks" />
+          <div class="details">
+            <h2>Mozzarella Sticks</h2>
+            <p>
+              Crispy on the outside and gooey on the inside, these mozzarella
+              sticks are a cheesy delight. Served with a tangy marinara dipping
+              sauce, they're a crowd-pleasing favorite.
+            </p>
+            <button
+              onclick="addToCart('Mozzarella Stickss', 'img/Mozzerela Sticks.jpeg', 3.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$3.99</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv snacks">
+          <img src="img/Buffalo Wings.jpeg" alt="Buffalo Wings" />
+          <div class="details">
+            <h2>Buffalo Wings</h2>
+            <p>
+              Juicy chicken wings tossed in a spicy buffalo sauce, served with
+              celery sticks and a side of blue cheese or ranch dressing. Perfect
+              for those who enjoy a little heat with their snack.
+            </p>
+            <button
+              onclick="addToCart('Buffalo Wings', 'img/Buffalo Wings.jpeg', 4.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$4.99</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv bundles">
+          <img src="img/PizzaBundle1.jpg" alt="The Single Bundle" />
+          <div class="details">
+            <h2>The Single Bundle</h2>
+            <p>This Bundle Contains a Pepperoni Pizza and Two Random Snacks!</p>
+            <button
+              onclick="addToCart('The Single Bundle', 'img/PizzaBundle1.jpg', 12.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv bundles">
+          <img src="img/PizzaBundle2.jpg" alt="The Triple Suprise Attack" />
+          <div class="details">
+            <h2>The Triple Suprise Attack</h2>
+            <p>This Bundle Contains 3 Random Pizzas from our wonderful Menu!</p>
+            <button
+              onclick="addToCart('The Triple Suprise Attack', 'img/PizzaBundle1.jpg', 24.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$24.99</span>
+          </div>
+        </div>
+        <div class="landing-menu-item filterDiv bundles">
+          <img src="img/PizzaBundle3.JPG" alt="Family Feast" />
+          <div class="details">
+            <h2>Family Feast</h2>
+            <p>
+              This Bundle Contains 2 Pizzas and 3 Drinks aswell as 2 Snacks!
+            </p>
+            <button
+              onclick="addToCart('Family Feast', 'img/PizzaBundle3.JPG', 45.99)"
+            >
+              Add to cart
+            </button>
+            <span class="price">$45.99</span>
+          </div>
+        </div>
+        <!-- To add more Menu Items place them down here with the same exact formatting as above -->
+      </section>
+    </main>
+    <!-- JavaScript Code for all the Functions -->
+    <script src="script.js"></script>
+  </body>
+</html>

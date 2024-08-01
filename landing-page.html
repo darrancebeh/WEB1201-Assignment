@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunway Pizza</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .header {
+        background: linear-gradient(90deg, #769e76, #4a7c59);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .header img {
+        height: 50px;
+      }
+      .header nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      .header nav a:hover {
+        color: #ffcc00;
+      }
+      .header .account {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .header .account img {
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+
+      .account-dropdown {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 1000;
+      }
+
+      .account-dropdown a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+        transition: background-color 0.3s;
+      }
+
+      .account-dropdown a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .hero {
+        background: url("img/pizzabanner.jpg.jpeg") no-repeat center
+          center/cover;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 3em;
+        margin: 0;
+      }
+
+      .hero p {
+        font-size: 1.5em;
+        margin: 10px 0;
+      }
+      .hero button {
+        background-color: #ffcc00;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .hero button:hover {
+        background-color: #e6b800;
+      }
+
+      .best-seller-header {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .best-seller-header h2 {
+        font-size: 2em;
+        color: #333;
+      }
+      .best-seller {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+      .best-seller .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        width: 300px;
+      }
+      .best-seller .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .best-seller .card img {
+        width: 350px; /* Set your desired width */
+        height: 350px; /* Set your desired height */
+        object-fit: cover;
+      }
+      .best-seller .card .content {
+        padding: 15px;
+        text-align: center;
+      }
+      .best-seller .card .content h3 {
+        margin: 10px 0;
+        font-size: 1.5em;
+      }
+      .best-seller .card .content p {
+        color: #666;
+        font-size: 1em;
+        margin: 10px 0;
+      }
+      .best-seller .card .content .price {
+        font-size: 1.2em;
+        color: #333;
+        margin: 10px 0;
+      }
+      .best-seller .card .content .add-to-cart {
+        background-color: #4a7c59;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .best-seller .card .content .add-to-cart:hover {
+        background-color: #769e76;
+      }
+      .menu-section {
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+
+      .menu-section h2 {
+        font-size: 2em;
+        color: #333;
+      }
+
+      .menu-items {
+        display: inline-block;
+        justify-content: center;
+        
+      }
+
+      .menu-item {
+        margin: 15px;
+        text-align: center;
+      }
+
+      .menu-item img {
+        width: 200px;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .menu-item img:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .menu-item h3 {
+        margin-top: 10px;
+        font-size: 1.5em;
+        color: #333;
+      }
+
+      .footer {
+        background-color: #4a7c59;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      .content {
+        flex: 1;
+        padding-bottom: 50px; /* Height of the footer */
+      }
+
+      .card {
+        width: 600px;
+        height: 550px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        
+      }
+
+      .card .content {
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="img/Logo converted into PNG.png" alt="Sunway Pizza Logo" />
+      <nav>
+        <a href="landing-page.html">Home</a>
+        <a href="menu-page.html">Menu</a>
+        <a href="contact-us.html">Contact</a>
+      </nav>
+      <div class="account" onclick="toggleDropdown()">
+        <span id="accountName">Account Name</span>
+        <img src="img/default profile image.png" alt="Account">
+        <div class="account-dropdown" id="accountDropdown">
+            <a href="index.html">Logout</a>
+        </div>
+    </div>
+    </div>
+    <div class="content">
+      <div class="hero">
+        <div>
+          <h1>Welcome to Sunway Pizza</h1>
+          <p>Delicious pizzas made with fresh ingredients from Sunway City!</p>
+          <a href="menu-page.html"><button>Browse Our Menu</button></a>
+        </div>
+      </div>
+
+      <div class="best-seller-header">
+        <h2>Our Best Sellers</h2>
+      </div>
+
+      <div class="best-seller">
+        <div class="card">
+          <img src="img/Hawaiian.jpg" alt="Pizza 1"/>
+          <div class="content">
+            <h3>Hawaiian pizza</h3>
+            <p>Delicious cheese pizza with fresh ingredients.</p>
+            <span class="price">$15.69</span>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/Pepperoni.jpeg" alt="Pizza 2"/>
+          <div class="content">
+            <h3>Pepperoni Pizza</h3>
+            <p>Spicy pepperoni pizza with a crispy crust.</p>
+            <span class="price">$20.00</span>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/BBQ CHICK.jpg" alt="Pizza 3"/>
+          <div class="content">
+            <h3>BBQ Chicken pizza</h3>
+            <p>BBQ chicken pizza with a tangy sauce.</p>
+            <span class="price">$28.00</span>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/Vegan pizzza.jpg" alt="Pizza 4" class="uniform-image"/>
+          <div class="content">
+            <h3>Vegetarian pizza</h3>
+            <p>Vegetarian pizza with fresh vegetables.</p>
+            <span class="price">$32.00</span>
+            <button class="add-to-cart" onclick="addToCart()">
+              Add to cart
+            </button>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+
+      <div class="menu-section">
+        <h2>Explore Our Full Menu</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <a href="menu-page.html">
+              <img src="img/Pizzatab.png" alt="Pizza" />
+              <h3>Pizza</h3>
+            </a>
+
+          <div class="menu-item">
+            <a href="menu-page.html">
+              <img src="img/softdrinkstab.png" alt="Drinks" />
+              <h3>Drinks</h3>
+            </a>
+          </div>
+
+          <div class="menu-item">
+            <a href="menu-page.html">
+              <img src="img/Snacktab.png" alt="Snacks" />
+              <h3>Snacks</h3>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2024 Sunway Pizza. All rights reserved.</p>
+      <a href="about-us.html">Meet the Team!</a>
+      <a href="#twitter">GitHub</a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const username = localStorage.getItem("username");
+        if (username) {
+          document.getElementById("accountName").innerText = username;
+        }
+      });
+
+      function toggleDropdown() {
+        var dropdown = document.getElementById("accountDropdown");
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
+      }
+
+      function logout() {
+        document.getElementById("accountName").innerText = "Account Name";
+        alert("Logout successful!");
+        window.location.href = "index.html";
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.closest(".account")) {
+          var dropdowns = document.getElementsByClassName("account-dropdown");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+              openDropdown.style.display = "none";
+            }
+          }
+        }
+      };
+
+      function addToCart() {
+        window.location.href = "cart.html";
+      }
+      
+    </script>
+  </body>
+</html>

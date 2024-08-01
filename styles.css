@@ -1,0 +1,487 @@
+/* LOGIN SYSTEM CSS START */
+
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form-group {
+  margin-bottom: 15px;
+}
+
+.login-form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form-group input {
+  width: calc(100%); /* Adjust width to account for padding and border */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.login-error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.login-signup-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-signup-section .login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-signup-section .login-button:hover {
+  background-color: #45a049;
+}
+
+.login-container button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* LOGIN PAGE CSS END */
+
+/* SIGNUP PAGE CSS START */
+
+.signup-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.signup-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-form-group {
+  margin-bottom: 15px;
+}
+
+.signup-form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.signup-form-group input {
+  width: calc(100%); /* Adjust width to account for padding and border */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.signup-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-section .signup-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-section .signup-button:hover {
+  background-color: #45a049;
+}
+
+.signup-container button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-container button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* SIGNUP PAGE CSS END */
+
+/* LANDING PAGE CSS START */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #639a6f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/*Header Code*/
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header .main-nav {
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+header .main-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header .cart {
+  margin-right: 20px;
+  position: relative;
+}
+
+header .cart a {
+  color: white;
+  text-decoration: none;
+}
+/*Checkout code */
+header .Checkout-cart {
+  margin-right: 20px;
+  position: relative;
+}
+
+.Checkout-cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.Checkout-cart-item .Checkout-quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.Checkout-cart-item .Checkout-quantity-control button {
+  background-color: #cd212a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.Checkout-cart-item .Checkout-quantity-control span {
+  margin: 0 10px;
+}
+
+.Checkout-cart-item button {
+  background-color: transparent;
+  border: none;
+  color: #cd212a;
+  cursor: pointer;
+}
+
+.Checkout-button {
+  background-color: #cd212a;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Checkout-back-button {
+  background: none;
+  border: none;
+  color: #4a4a4a;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.Checkout-cart-container {
+  padding: 20px;
+}
+
+.Checkout-cart-item img {
+  width: 50px;
+  height: auto;
+}
+
+.Checkout-cart-item .Checkout-item-name {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.Checkout-cart-item .Checkout-item-price {
+  font-weight: bold;
+}
+
+.Checkout-total-price {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+}
+/*Shopping Cart Code*/
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  color: black;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  padding: 10px;
+  max-height: 300px; /* Add max height */
+  overflow-y: auto; /* Add scroll bar */
+}
+
+.cart-dropdown.show {
+  display: block;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-item img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.cart-item .quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item .quantity-control button {
+  background-color: #cd212a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart-item .quantity-control span {
+  margin: 0 10px;
+}
+
+.cart-item button {
+  background-color: transparent;
+  border: none;
+  color: #cd212a;
+  cursor: pointer;
+}
+
+.checkout-button {
+  background-color: #cd212a;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+}
+/*Main Menu Code*/
+main {
+  padding: 80px 20px 20px;
+}
+
+.landing-back-button {
+  background: none;
+  border: none;
+  color: #4a4a4a;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.landing-menu-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.landing-menu-categories button {
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.landing-menu-categories button:hover,
+.landing-menu-categories button:focus,
+.landing-menu-categories button.active {
+  background-color: #cd212a;
+}
+
+.landing-menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.landing-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.landing-menu-item img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.landing-menu-item .details {
+  text-align: center;
+  width: 100%;
+}
+
+.landing-menu-item h2 {
+  margin: 10px 0;
+  color: #000000;
+}
+
+.landing-menu-item p {
+  margin: 10px 0;
+  color: #4a4a4a;
+}
+
+.landing-menu-item button {
+  background-color: #d74048;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.landing-menu-item button:hover,
+.landing-menu-item button:focus {
+  background-color: #cd212a;
+}
+
+.landing-menu-item .price {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+/*Filtering Sections Code*/
+.filterDiv {
+  display: none;
+}
+/*Cart DropBox*/
+.show {
+  display: block;
+}
+
+/* LANDING PAGE CSS END */
