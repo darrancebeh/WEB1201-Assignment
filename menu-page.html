@@ -9,17 +9,20 @@
 
   <body>
     <header>
-      <div class="logo">
-        <!-- Change logo here -->
-        <img src="logo.png" alt="Web Logo" />
-        <span>Web Logo</span>
+      <div class="header">
+        <img src="img/Logo converted into PNG.png" alt="Sunway Pizza Logo" />
+        <nav>
+          <a href="landing-page.html">Home</a>
+          <a href="menu-page.html">Menu</a>
+          <a href="contact-us.html">Contact</a>
+        </nav>
+        <div class="account" onclick="toggleDropdown()">
+          <span id="accountName">Account Name</span>
+          <img src="img/default profile image.png" alt="Account">
+          <div class="account-dropdown" id="accountDropdown">
+              <a href="index.html">Logout</a>
+          </div>
       </div>
-      <!-- add HTML Links here Replace # -->
-      <nav class="main-nav">
-        <a href="#">Menu</a>
-        <a href="#">About us</a>
-        <a href="#">Contact us</a>
-      </nav>
       <div class="cart">
         <!-- Cart Header here ps. Add logo if you want -->
         <a onclick="toggleCart()">My cart</a>

@@ -177,19 +177,26 @@
       }
 
       .menu-items {
-        display: inline-block;
+        display: flex;
         justify-content: center;
-        
+        flex-wrap: wrap;
       }
 
       .menu-item {
-        margin: 15px;
+        margin: 30px;
         text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .menu-item img {
-        width: 200px;
+        height: 450px;
+        width: 425px;
+        object-fit: cover;
         border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
       }
 
@@ -204,14 +211,38 @@
         color: #333;
       }
 
+      @media (max-width: 1024px) {
+        .menu-item {
+          flex-direction: column; /* Stack items vertically on smaller screens */
+          align-items: center;
+        }
+
+        .menu-item img {
+          max-width: 100%; /* Ensure image does not exceed container width */
+        }
+      }
+
       .footer {
         background-color: #4a7c59;
         color: white;
         text-align: center;
-        padding: 10px 0;
         position: fixed;
+        padding: 10px 0;
         width: 100%;
         bottom: 0;
+      }
+
+      .footer a {
+        color: #ffffff; 
+        background-color: #075018; 
+        padding: 10px 15px; 
+        text-decoration: none;
+        border-radius: 5px; 
+        transition: background-color 0.3s ease;
+      }
+
+      .footer a:hover {
+        background-color: #555555;
       }
 
       .content {
@@ -321,7 +352,7 @@
           <div class="menu-item">
             <a href="menu-page.html">
               <img src="img/Pizzatab.png" alt="Pizza" />
-              <h3>Pizza</h3>
+              <h3>Pizzas</h3>
             </a>
 
           <div class="menu-item">
@@ -344,8 +375,7 @@
 
     <div class="footer">
       <p>&copy; 2024 Sunway Pizza. All rights reserved.</p>
-      <a href="about-us.html">Meet the Team!</a>
-      <a href="#twitter">GitHub</a>
+      <a href="https://github.com/darrancebeh/WEB1201-Assignment" target="_blank">GitHub</a>
     </div>
 
     <script>
