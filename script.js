@@ -160,7 +160,7 @@ function renderCart() {
         <div class="total-price">
             Total: $${totalPrice.toFixed(2)}
         </div>
-        <button class="checkout-button" onclick="location.href='CheckoutPage.html'">Checkout</button> <!--Brings User to the Checkout Page-->
+        <button class="checkout-button" onclick="location.href='checkout-page.html'">Checkout</button> <!--Brings User to the Checkout Page-->
     `;
 }
 
@@ -251,3 +251,19 @@ function renderCartCheckout() {
 }
 
 // LANDING PAGE SCRIPT END //
+
+function getCartItems() {
+  // Fetch cart items from local storage
+  const items = JSON.parse(localStorage.getItem("Temp")) || [];
+
+  // Map the items to a structured format
+  const cartItems = items.map((item) => ({
+    id: item.id,
+    name: item.name,
+    price: item.price,
+    quantity: item.quantity,
+    totalPrice: item.price * item.quantity,
+  }));
+
+  return cartItems;
+}

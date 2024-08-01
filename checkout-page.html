@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Checkout</h1>
+    </header>
+    <main>
+      <section class="cart-items">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cart items will be dynamically inserted here -->
+          </tbody>
+        </table>
+      </section>
+      <section class="total-price">
+        <h2>Total: $<span id="total-amount">0.00</span></h2>
+      </section>
+      <button class="checkout-button">Proceed to Checkout</button>
+    </main>
+
+    <script>
+      // Ensure the script runs after the DOM is fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        const cartItems = getCartItems();
+        const cartItemsContainer = document.querySelector(".cart-items tbody");
+        const totalAmountElement = document.getElementById("total-amount");
+        let totalAmount = 0;
+
+        cartItems.forEach((item) => {
+          const itemRow = document.createElement("tr");
+          itemRow.innerHTML = `
+            <td>${item.name}</td>
+            <td>$${item.price}</td>
+            <td>${item.quantity}</td>
+            <td>$${item.totalPrice}</td>
+          `;
+          cartItemsContainer.appendChild(itemRow);
+          totalAmount += item.totalPrice;
+        });
+
+        totalAmountElement.textContent = totalAmount.toFixed(2);
+      });
+    </script>
+  </body>
+</html>

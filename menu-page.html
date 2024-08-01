@@ -294,6 +294,37 @@
       </section>
     </main>
     <!-- JavaScript Code for all the Functions -->
-    <script src="script.js"></script>
+    
+    <div class="footer">
+      <p>&copy; 2024 Sunway Pizza. All rights reserved.</p>
+      <a href="https://github.com/darrancebeh/WEB1201-Assignment" target="_blank">GitHub</a>
+    </div>
+
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        filterSelection('all');
+    });
+
+    function filterSelection(category, element) {
+        const items = document.querySelectorAll('.landing-menu-item');
+        items.forEach(item => {
+            item.style.display = item.classList.contains(category) || category === 'all' ? 'block' : 'none';
+        });
+
+        // Remove active class from all buttons
+        const buttons = document.querySelectorAll('.landing-menu-categories .btn');
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        // Add active class to the clicked button
+        if (element) {
+            element.classList.add('active');
+        }
+    }
+</script>
+
+  <script src="script.js"></script>
 </html>
