@@ -23,7 +23,7 @@ function registerUser(event) {
   localStorage.setItem("users", JSON.stringify(users));
 
   alert("User registered successfully!");
-  window.location.href = "login-page.html";
+  window.location.href = "index.html";
 }
 
 // SIGN UP PAGE SCRIPT END //
