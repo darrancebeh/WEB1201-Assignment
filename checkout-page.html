@@ -102,7 +102,9 @@
         <section class="checkout-total-price">
           <h2>Total: $<span id="checkout-total-amount">0.00</span></h2>
         </section>
-        <button class="checkout-button">Proceed to Checkout</button>
+        <button id="checkout-button" class="checkout-button">
+          Proceed to Checkout
+        </button>
         <button class="back-button" onclick="goBack()">
           Back to Landing Page
         </button>
@@ -139,6 +141,26 @@
       function goBack() {
         window.location.href = "landing-page.html";
       }
+
+      const proceedToCheckoutButton =
+        document.getElementById("checkout-button");
+      proceedToCheckoutButton.addEventListener("click", function () {
+        alert(
+          "Order received! You may collect your order at our outlet in around 30 minutes and pay by cash!"
+        );
+
+        localStorage.removeItem("cartItems");
+
+        // Update the DOM to reflect the empty cart
+        const cartItemsContainer = document.querySelector(
+          ".checkout-cart-items tbody"
+        );
+        const totalAmountElement = document.getElementById(
+          "checkout-total-amount"
+        );
+        cartItemsContainer.innerHTML = "";
+        totalAmountElement.textContent = "0.00";
+      });
     </script>
   </body>
 </html>
