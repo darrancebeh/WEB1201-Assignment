@@ -368,9 +368,39 @@ header .Checkout-cart {
   margin-top: 20px;
 }
 /*Shopping Cart Code*/
+.top-container {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-back-button {
+  display: flex;
+  background-color: #f4f4f4;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart {
+  position: relative;
+  top: -73px;
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.cart img {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px;
+  cursor: pointer;
+}
+
 .cart-dropdown {
   display: none;
   position: absolute;
+  top: 100%; /* Position below the cart */
   right: 0;
   background-color: white;
   color: black;

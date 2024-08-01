@@ -23,19 +23,22 @@
               <a href="index.html">Logout</a>
           </div>
       </div>
-      <div class="cart">
-        <!-- Cart Header here ps. Add logo if you want -->
-        <a onclick="toggleCart()">My cart</a>
-        <div id="cart-dropdown" class="cart-dropdown"></div>
-      </div>
     </header>
     <main>
-      <button
+      <div class="top-container">
+        <button
         class="landing-back-button"
-        onclick="window.location.href='landing-page.html'"
-      >
+        onclick="window.location.href='landing-page.html'">
         ← back
-      </button>
+        </button>
+
+        <div class="cart">
+          <a onclick="toggleCart()"><img src="img/Shopping Cart Outline.svg"></a>
+          
+          <div id="cart-dropdown" class="cart-dropdown"></div>
+      </div>
+
+
       <h1>Menu</h1>
       <!-- Does the Filtering for the Sections -->
       <nav class="landing-menu-categories">

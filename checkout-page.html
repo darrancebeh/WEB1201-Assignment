@@ -4,42 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout Page</title>
-    <link rel="stylesheet" href="styles.css" />
-
     <script src="script.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .checkout-container {
+        background-color: #fff;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .checkout-cart-items table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+      }
+
+      .checkout-cart-items th,
+      .checkout-cart-items td {
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        text-align: left;
+      }
+
+      .checkout-cart-items th {
+        background-color: #f2f2f2;
+      }
+
+      .checkout-cart-items tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .checkout-cart-items tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      .checkout-total-price {
+        text-align: right;
+        margin-bottom: 2rem;
+      }
+
+      .checkout-button {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+        border-radius: 4px;
+      }
+
+      .checkout-button:hover {
+        background-color: #218838;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Checkout</h1>
-    </header>
-    <main>
-      <section class="cart-items">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Total Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Cart items will be dynamically inserted here -->
-          </tbody>
-        </table>
-      </section>
-      <section class="total-price">
-        <h2>Total: $<span id="total-amount">0.00</span></h2>
-      </section>
-      <button class="checkout-button">Proceed to Checkout</button>
-    </main>
+    <div class="checkout-container">
+      <header>
+        <h1>Checkout</h1>
+      </header>
+      <main>
+        <section class="checkout-cart-items">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+          </table>
+        </section>
+        <section class="checkout-total-price">
+          <h2>Total: $<span id="checkout-total-amount">0.00</span></h2>
+        </section>
+        <button class="checkout-button">Proceed to Checkout</button>
+        <button class="back-button" onclick="goBack()">
+          Back to Landing Page
+        </button>
+      </main>
+    </div>
 
     <script>
       // Ensure the script runs after the DOM is fully loaded
       document.addEventListener("DOMContentLoaded", function () {
         const cartItems = getCartItems();
-        const cartItemsContainer = document.querySelector(".cart-items tbody");
-        const totalAmountElement = document.getElementById("total-amount");
+        const cartItemsContainer = document.querySelector(
+          ".checkout-cart-items tbody"
+        );
+        const totalAmountElement = document.getElementById(
+          "checkout-total-amount"
+        );
         let totalAmount = 0;
 
         cartItems.forEach((item) => {
@@ -56,6 +135,10 @@
 
         totalAmountElement.textContent = totalAmount.toFixed(2);
       });
+
+      function goBack() {
+        window.location.href = "landing-page.html";
+      }
     </script>
   </body>
 </html>
