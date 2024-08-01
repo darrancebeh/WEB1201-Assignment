@@ -86,7 +86,7 @@
     <main>
       <div class="top-container">
         <button
-        class="landing-back-button"
+        class="main-back-button"
         onclick="window.location.href='landing-page.html'">
         ← back
         </button>
@@ -100,20 +100,17 @@
 
       <h1>Menu</h1>
       <!-- Does the Filtering for the Sections -->
-      <nav class="landing-menu-categories">
+      <nav class="main-menu-categories">
         <button class="btn active" onclick="filterSelection('all')">
-          Show all
+          All
         </button>
         <button class="btn" onclick="filterSelection('pizza')">Pizza</button>
         <button class="btn" onclick="filterSelection('drinks')">Drinks</button>
         <button class="btn" onclick="filterSelection('snacks')">Snacks</button>
-        <button class="btn" onclick="filterSelection('bundles')">
-          Bundles
-        </button>
       </nav>
       <!-- Actual Menu/Food Sections -->
-      <section class="landing-menu-section container">
-        <div class="landing-menu-item filterDiv pizza">
+      <section class="main-menu-section container">
+        <div class="main-menu-item filterDiv pizza">
           <img src="img/Peperoni Pizza.jpeg" alt="The Pepperoni Supreme" />
           <div class="details">
             <h2>The Pepperoni Supreme</h2>
@@ -135,7 +132,7 @@
             <!-- Price of Product -->
           </div>
         </div>
-        <div class="landing-menu-item filterDiv pizza">
+        <div class="main-menu-item filterDiv pizza">
           <img src="img/PineapplePizza.webp" alt="Pineapple Pizza" />
           <div class="details">
             <h2>Tropical Pineapple Delight</h2>
@@ -153,7 +150,7 @@
             <span class="price">$10.39</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv pizza">
+        <div class="main-menu-item filterDiv pizza">
           <img src="img/Cheese Pizza.jpg" alt="Pep roni" />
           <div class="details">
             <h2>Ultimate Cheese Lovers</h2>
@@ -171,7 +168,7 @@
             <span class="price">$16.59</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv pizza">
+        <div class="main-menu-item filterDiv pizza">
           <img src="img/Veggie Pizza.jpeg" alt="Veggie Pizza" />
           <div class="details">
             <h2>Garden Fresh Veggie</h2>
@@ -189,7 +186,7 @@
             <span class="price">$12.69</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv drinks">
+        <div class="main-menu-item filterDiv drinks">
           <img src="img/Italian Soda.jpg" alt="Italian Soda" />
           <div class="details">
             <h2>Classic Italian Soda</h2>
@@ -207,7 +204,7 @@
             <span class="price">$5.99</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv drinks">
+        <div class="main-menu-item filterDiv drinks">
           <img src="img/Lemonade.webp" alt="Homemade Lemonade" />
           <div class="details">
             <h2>Homemade Lemonade</h2>
@@ -224,7 +221,7 @@
             <span class="price">$4.99</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv drinks">
+        <div class="main-menu-item filterDiv drinks">
           <img src="img/Berry Punch.jpg" alt="Berry Punch" />
           <div class="details">
             <h2>Sparkling Berry Punch</h2>
@@ -242,7 +239,7 @@
             <span class="price">$3.50</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv drinks">
+        <div class="main-menu-item filterDiv drinks">
           <img src="img/Iced Tea.jpeg" alt="Classic Iced Tea" />
           <div class="details">
             <h2>Classic Iced Tea</h2>
@@ -260,7 +257,7 @@
             <span class="price">$6.99</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv snacks">
+        <div class="main-menu-item filterDiv snacks">
           <img src="img/garlicknots.jpg" alt="Garlic Knots" />
           <div class="details">
             <h2>Garlic Knots</h2>
@@ -277,7 +274,7 @@
             <span class="price">$2.99</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv snacks">
+        <div class="main-menu-item filterDiv snacks">
           <img src="img/Mozzerela Sticks.jpeg" alt="Mozzarella Sticks" />
           <div class="details">
             <h2>Mozzarella Sticks</h2>
@@ -294,7 +291,7 @@
             <span class="price">$3.99</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv snacks">
+        <div class="main-menu-item filterDiv snacks">
           <img src="img/Buffalo Wings.jpeg" alt="Buffalo Wings" />
           <div class="details">
             <h2>Buffalo Wings</h2>
@@ -311,48 +308,7 @@
             <span class="price">$4.99</span>
           </div>
         </div>
-        <div class="landing-menu-item filterDiv bundles">
-          <img src="img/PizzaBundle1.jpg" alt="The Single Bundle" />
-          <div class="details">
-            <h2>The Single Bundle</h2>
-            <p>This Bundle Contains a Pepperoni Pizza and Two Random Snacks!</p>
-            <button
-              onclick="addToCart('The Single Bundle', 'img/PizzaBundle1.jpg', 12.99)"
-            >
-              Add to cart
-            </button>
-            <span class="price">$12.99</span>
-          </div>
-        </div>
-        <div class="landing-menu-item filterDiv bundles">
-          <img src="img/PizzaBundle2.jpg" alt="The Triple Suprise Attack" />
-          <div class="details">
-            <h2>The Triple Suprise Attack</h2>
-            <p>This Bundle Contains 3 Random Pizzas from our wonderful Menu!</p>
-            <button
-              onclick="addToCart('The Triple Suprise Attack', 'img/PizzaBundle1.jpg', 24.99)"
-            >
-              Add to cart
-            </button>
-            <span class="price">$24.99</span>
-          </div>
-        </div>
-        <div class="landing-menu-item filterDiv bundles">
-          <img src="img/PizzaBundle3.JPG" alt="Family Feast" />
-          <div class="details">
-            <h2>Family Feast</h2>
-            <p>
-              This Bundle Contains 2 Pizzas and 3 Drinks aswell as 2 Snacks!
-            </p>
-            <button
-              onclick="addToCart('Family Feast', 'img/PizzaBundle3.JPG', 45.99)"
-            >
-              Add to cart
-            </button>
-            <span class="price">$45.99</span>
-          </div>
-        </div>
-        <!-- To add more Menu Items place them down here with the same exact formatting as above -->
+        
       </section>
     </main>
     <!-- JavaScript Code for all the Functions -->

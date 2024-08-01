@@ -6,6 +6,10 @@
     <title>Contact Us</title>
     <style>
       body {
+        background-image: url("img/4in1BUNDLE.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
@@ -121,7 +125,9 @@
             emailError.textContent = "Please enter a valid email address.";
           } else {
             emailError.textContent = "";
-            alert("Form submitted successfully!");
+            alert(
+              "Your message has been sent to the team! Thank you for your feedback."
+            );
             // form does not actually send anywhere, only for frontend showcase purpose
           }
         });

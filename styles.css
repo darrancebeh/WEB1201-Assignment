@@ -77,7 +77,7 @@
 }
 
 .footer a:hover {
-  background-color: #555555;
+  background-color: #03330e;
 }
 
 /* Universal Styles END*/
@@ -145,7 +145,7 @@
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #4caf50;
+  background-color: #ff0000;
   border: none;
   border-radius: 4px;
   text-decoration: none;
@@ -154,7 +154,7 @@
 }
 
 .login-signup-section .login-button:hover {
-  background-color: #45a049;
+  background-color: #a60000;
 }
 
 .login-container button[type="submit"] {
@@ -162,7 +162,7 @@
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #333;
+  background-color: #ff7300;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -170,7 +170,7 @@
 }
 
 .login-container button[type="submit"]:hover {
-  background-color: #555;
+  background-color: #de6400;
 }
 
 /* LOGIN PAGE CSS END */
@@ -232,7 +232,7 @@
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #4caf50;
+  background-color: #ff0000;
   border: none;
   border-radius: 4px;
   text-decoration: none;
@@ -241,7 +241,7 @@
 }
 
 .signup-section .signup-button:hover {
-  background-color: #45a049;
+  background-color: #a60000;
 }
 
 .signup-container button[type="submit"] {
@@ -249,7 +249,7 @@
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #333;
+  background-color: #ff7300;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -257,7 +257,7 @@
 }
 
 .signup-container button[type="submit"]:hover {
-  background-color: #555;
+  background-color: #de6400;
 }
 
 /* SIGNUP PAGE CSS END */
@@ -381,7 +381,7 @@ header .Checkout-cart {
   align-items: center;
 }
 
-.landing-back-button {
+.main-back-button {
   display: flex;
   background-color: #f4f4f4;
   border: none;
@@ -475,7 +475,7 @@ main {
   padding: 80px 20px 20px;
 }
 
-.landing-back-button {
+.main-back-button {
   background: none;
   border: none;
   color: #4a4a4a;
@@ -490,13 +490,13 @@ h1 {
   color: #000000;
 }
 
-.landing-menu-categories {
+.main-menu-categories {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.landing-menu-categories button {
+.main-menu-categories button {
   background-color: #4a4a4a;
   color: white;
   border: none;
@@ -506,20 +506,20 @@ h1 {
   font-size: 16px;
 }
 
-.landing-menu-categories button:hover,
-.landing-menu-categories button:focus,
-.landing-menu-categories button.active {
+.main-menu-categories button:hover,
+.main-menu-categories button:focus,
+.main-menu-categories button.active {
   background-color: #cd212a;
 }
 
-.landing-menu-section {
+.main-menu-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0;
 }
 
-.landing-menu-item {
+.main-menu-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -530,29 +530,29 @@ h1 {
   box-sizing: border-box;
 }
 
-.landing-menu-item img {
+.main-menu-item img {
   height: 300px;
   width: 100%;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
-.landing-menu-item .details {
+.main-menu-item .details {
   text-align: center;
   width: 100%;
 }
 
-.landing-menu-item h2 {
+.main-menu-item h2 {
   margin: 10px 0;
   color: #000000;
 }
 
-.landing-menu-item p {
+.main-menu-item p {
   margin: 10px 0;
   color: #4a4a4a;
 }
 
-.landing-menu-item button {
+.main-menu-item button {
   background-color: #d74048;
   color: white;
   border: none;
@@ -561,12 +561,12 @@ h1 {
   margin-top: 10px;
 }
 
-.landing-menu-item button:hover,
-.landing-menu-item button:focus {
+.main-menu-item button:hover,
+.main-menu-item button:focus {
   background-color: #cd212a;
 }
 
-.landing-menu-item .price {
+.main-menu-item .price {
   display: block;
   margin-top: 10px;
   font-size: 18px;
@@ -582,7 +582,7 @@ h1 {
   display: block;
 }
 
-/* LANDING PAGE CSS END */
+/* main PAGE CSS END */
 
 .checkout-cart-items table {
   width: 100%;
