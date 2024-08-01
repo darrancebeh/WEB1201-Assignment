@@ -85,6 +85,10 @@
 /* LOGIN SYSTEM CSS START */
 
 .login-body {
+  background-image: url("img/4in1BUNDLE.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +99,7 @@
 }
 
 .login-container {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -174,6 +178,10 @@
 /* SIGNUP PAGE CSS START */
 
 .signup-body {
+  background-image: url("img/4in1BUNDLE.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,7 +192,7 @@
 }
 
 .signup-container {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -260,7 +268,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
 }
 
 /*Header Code*/
