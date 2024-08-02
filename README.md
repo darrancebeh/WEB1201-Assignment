@@ -13,4 +13,4 @@ WEB1201 Group Assignment, Group 02, September Semester 2024.
 - Figma Design Completion: 20<sup>th</sup> July 2024  
 - Project Completion: 31<sup>st</sup> July 2024
 
-Project Runthrough Video: https://youtu.be/Kp9yUqtWi-g
+Project Runthrough Video<sub>, by Darrance</sub>: https://youtu.be/Kp9yUqtWi-g
